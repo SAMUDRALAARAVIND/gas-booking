@@ -28,7 +28,7 @@
             <div class="col-sm-2"></div>
             <div class="col-sm-8">
                 <div class="row">
-                    <form action="dbr.php" method="post" onsubmit="return registration_validate();">
+                    <form action="" method="post" onsubmit="return registration_validate();">
 
 
                         <div class="input-field col s12">
@@ -48,42 +48,46 @@
                         <div class="input-field col s12">
                             <i class="material-icons prefix">phone</i>
                             <input type="text" placeholder="**********" id="phn_number" name="phn_number" required>
-                       
+                            <i class="material-icons prefix" style="visibility: hidden;color:green;" id="phone_no_check">check</i>
                             <label id="phone_no_label"><b>Phone Number</b></label>
                         </div>
                         <div class="input-field col s12">
                             <i class="material-icons prefix">home</i>
                             <textarea type="text" class="materialize-textarea" placeholder="Address"
                                 id="address" name="address" required></textarea>
+                                <i class="material-icons prefix" style="visibility: hidden;color:green;" id="address_check">check</i>
                             <label id="address_label"><b>Address</b></label>
                         </div>
                         <div class="input-field col s12">
                             <i class="material-icons prefix">location_on</i>
                             <input type="text" placeholder="Pincode" id="pincode" name="pincode"
                                 required>
+                            <i class="material-icons prefix" style="visibility: hidden;color:green;" id="pincode_check">check</i>
                             <label id="pincode_label"><b>Pincode</b></label>
                         </div>
                         <div class="input-field col s12">
                             <i class="material-icons prefix">password</i>
                             <input type="password" placeholder="create password" id="create_password"
-                                name="create_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}"
+                                name="create_password" 
                                 title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 to 16 characters"
                                 required>
+                                <i class="material-icons prefix"  id="create_password_check">visibility_off</i>
                             <label id="create_password_label"><b>Create Password</b></label>
                         </div>
                         <div class="input-field col s12">
                             <i class="material-icons prefix">password</i>
                             <input type="password" placeholder="confirm password" id="confirm_password"
-                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}"
+                                
                                 title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 to 16 characters"
                                 name="confirm_password" required>
+                                <i class="material-icons prefix"  id="confirm_password_check">visibility_off</i>
                             <label id="confirm_password_label"><b>Confirm Password</b></label>
                         </div>
                         <br>
                         <div>
                             <center>
                                 <p>Already a member ? <a href="#">Login</a></p>
-                                <button class="waves-effect btn" disabled >Register</button></center>
+                                <button class="waves-effect btn"  >Register</button></center>
                         </div>
                     </form>
                 </div>
@@ -92,12 +96,16 @@
         </div>
 
 </div>
+
     <script>
         if(screen.width < 768)
         {
            document.getElementById("container").className = "container-fluid" ;
         }
+        const arr = [true,true,true,true,true,true,true,true] ;
+        console.log(arr) ;
     </script>
+   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="user-input.js"></script>
     <script type="text/javascript" src="pincode.js"></script>
