@@ -16,13 +16,14 @@
 </head>
 
 <body>
-    <nav style="background-color:#6987e7;position: fixed;">
+  
+    <nav style="background-color:#6987e7;position: fixed;z-index:1;">
         <center>
             <div><span style="font-size:20px;">Registration Form</span></div>
         </center>
     </nav>
     <br><br><br><br>
-    <div class="container">
+    <div class="container" id="container">
         <div class="row">
             <div class="col-sm-2"></div>
             <div class="col-sm-8">
@@ -33,18 +34,21 @@
                         <div class="input-field col s12">
                             <i class="material-icons prefix">person</i>
                             <input type="text" placeholder="Username" id="user_name" name="username" required>
-                            <label><b>Username</b></label>
+                            <i class="material-icons prefix" style="visibility: hidden;color:green;" id="username_check">check</i>
+                            <label id="username_label"><b>Username</b></label>
                         </div>
 
                         <div class="input-field col s12">
                             <i class="material-icons prefix">email</i>
                             <input type="email" placeholder="yourmailid@emailprovider.domain" id="emailid"
                                 name="emailid" required>
-                            <label><b>Email Id</b></label>
+                                <i class="material-icons prefix" style="visibility: hidden;color:green;" id="email_check">check</i>
+                            <label id="email_label" ><b>Email Id</b></label>
                         </div>
                         <div class="input-field col s12">
                             <i class="material-icons prefix">phone</i>
                             <input type="text" placeholder="**********" id="phn_number" name="phn_number" required>
+                       
                             <label id="phone_no_label"><b>Phone Number</b></label>
                         </div>
                         <div class="input-field col s12">
@@ -79,7 +83,7 @@
                         <div>
                             <center>
                                 <p>Already a member ? <a href="#">Login</a></p>
-                                <button class="waves-effect btn">Register</button></center>
+                                <button class="waves-effect btn" disabled >Register</button></center>
                         </div>
                     </form>
                 </div>
@@ -87,9 +91,15 @@
             <div class="col-sm-2"></div>
         </div>
 
-    </div>
+</div>
+    <script>
+        if(screen.width < 768)
+        {
+           document.getElementById("container").className = "container-fluid" ;
+        }
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
+    <script type="text/javascript" src="user-input.js"></script>
     <script type="text/javascript" src="pincode.js"></script>
     <script type="text/javascript" src="validation.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
