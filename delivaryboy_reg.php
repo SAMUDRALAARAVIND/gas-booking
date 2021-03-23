@@ -12,12 +12,12 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <title>Document</title>
+    <title>Delivary boy Registration</title>
 </head>
 
 <body>
   
-    <nav style="background-color:#6987e7;position: fixed;z-index:1;">
+    <nav style="background-color:red;position: fixed;z-index:1;">
         <center>
             <div><span style="font-size:20px;">Registration Form</span></div>
         </center>
@@ -97,13 +97,22 @@
 
 </div>
 
+
+
+
+<div class="0">
+
+
+
+</div>
+
     <script>
         if(screen.width < 768)
         {
            document.getElementById("container").className = "container-fluid" ;
         }
-        const arr = [true,true,true,true,true,true,true,true] ;
-        console.log(arr) ;
+        const arr = [false,false,false,false,false,false,false,false] ;
+        //console.log(arr) ;
     </script>
    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

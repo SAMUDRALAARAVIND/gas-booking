@@ -14,6 +14,9 @@ function registration_validate()
    {
     return true ;
    }
+   else{
+      return false ;
+   }
    }
    
 }

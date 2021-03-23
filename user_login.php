@@ -12,7 +12,7 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <title>Document</title>
+    <title>User Login</title>
 </head>
 
 <body>
@@ -28,7 +28,7 @@
             <div class="col-sm-2"></div>
             <div class="col-sm-8">
                 <div class="row">
-                    <form action="dbr.php" method="post" onsubmit="return registration_validate();" style="width:100%;">
+                    <form action="dbr.php" method="post" onsubmit="return login_validate();" style="width:100%;">
 
 
                         <div class="input-field col s12">
@@ -41,18 +41,19 @@
                        
                         <div class="input-field col s12">
                             <i class="material-icons prefix">password</i>
-                            <input type="password" placeholder="create password" id="create_password"
-                                name="create_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}"
+                            <input type="password" placeholder="password" id="password"
+                                name="password" 
                                 title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 to 16 characters"
                                 required>
-                            <label id="create_password_label"><b>Create Password</b></label>
+                                <i class="material-icons prefix" id="check" >visibility_off</i>
+                            <label id="password_label"><b>Password</b></label>
                         </div>
                         
                         <br>
                         <div>
                             <center>
                                 <p>Already a member ? <a href="#">Login</a></p>
-                                <button class="waves-effect btn" disabled >Register</button></center>
+                                <button class="waves-effect btn"  >Login</button></center>
                         </div>
                     </form>
                 </div>
@@ -68,9 +69,7 @@
         }
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="user-input.js"></script>
-    <script type="text/javascript" src="pincode.js"></script>
-    <script type="text/javascript" src="validation.js"></script>
+    <script src="input-check.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
     </script>
